@@ -1,0 +1,42 @@
+/* Custom styles for the app */
+body {
+    font-family: 'Inter', sans-serif;
+}
+.font-mono-google {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Add a subtle shake animation for wrong clicks */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+.animate-shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Pulse animation for the starting '1' */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+}
+.animate-pulse-once {
+    animation: pulse 1.5s infinite;
+}
+
+/* Prevent text selection on grid cells */
+.cell {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
